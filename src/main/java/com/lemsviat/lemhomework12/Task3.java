@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Task3 {
     public static void main(String[] args) {
-        Integer[] testArray = new Integer[100];
+        Integer[] testArray = new Integer[50];
         for (int i = 0; i < testArray.length; i++) {
             testArray[i] = (int) (Math.random() * 100);
         }
@@ -13,7 +13,8 @@ public class Task3 {
 
         Map<Integer, Integer> result = new TreeMap<>();
         int count = 1;
-        for (int i = 0; i < testArray.length-1; i++) {
+        boolean equalNumber = false;
+        for (int i = 0; i < testArray.length - 1; i++) {
             if (testArray[i].equals(testArray[i + 1])) {
                 count++;
                 result.put(testArray[i], count);
@@ -21,11 +22,18 @@ public class Task3 {
             }
             count = 1;
         }
-        for (Map.Entry<Integer, Integer> item : result.entrySet()) {
-            System.out.println("Число " + item.getKey() + " повторяется "
-                    + item.getValue()+" раза.");
+        if (!result.isEmpty()) {
+            equalNumber = true;
+            System.out.println("Result: " + equalNumber + ".");
+            for (Map.Entry<Integer, Integer> item : result.entrySet()) {
+                System.out.println("Число " + item.getKey() + " повторяется "
+                        + item.getValue() + " раза.");
+            }
+        } else {
+            System.out.println("Result: " + equalNumber + ".");
+            System.out.println("Дубликатов нет.");
         }
+
+
     }
-
-
 }
