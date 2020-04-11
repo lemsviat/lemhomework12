@@ -50,7 +50,7 @@ public class ModifiedCollection extends ArrayList<Integer> {
     public static void main(String[] args) {
         ModifiedCollection modifiedCollection = new ModifiedCollection();
         modifiedCollection.add(null);
-        //modifCollection.add("a"); //ввод чего угодно, кроме целого числа выдаст ошибку
+        //modifiedCollection.add("a"); //ввод чего угодно, кроме целого числа выдаст ошибку
         for (int i=0; i<10; i++) {
             modifiedCollection.add((int) (Math.random()*5));
         }
