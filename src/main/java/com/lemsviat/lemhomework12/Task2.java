@@ -6,7 +6,7 @@ import java.util.TreeSet;
 
 public class Task2 {
     public static void main(String[] args) {
-        Integer[] testArray = new Integer[30];
+        Integer[] testArray = new Integer[50];
         TreeSet<Integer> testSet = new TreeSet<>();
         int number = 56;
 
